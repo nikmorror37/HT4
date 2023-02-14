@@ -129,6 +129,33 @@ namespace HomeTaskLesson4
             //    }
 
 
+            //hometask1(второй вариант) массивы решение с занятия для саморазвития
+
+            //int[] source = { 5, 4, 7, 2, 9, 7, 10 };
+            //int numberReadLine = Convert.ToInt32(Console.ReadLine());
+            //int futureArrayLength = 0;
+
+            //foreach (int item in source)
+            //{
+            //    if (item != numberReadLine)
+            //    {
+            //        futureArrayLength++;
+            //    }
+            //}
+
+            //int[] resultArray = new int[futureArrayLength];
+
+            //int iterationForAppend = 0;
+
+            //for (int i = 0; i < source.Length; i++)
+            //{
+            //    if (source[i] != numberReadLine && iterationForAppend != resultArray.Length)
+            //    {
+            //        resultArray[iterationForAppend] = source[i];
+            //        iterationForAppend++;
+            //    }
+            //}
+
             //hometask2 массивы
 
             //Console.WriteLine("Введите размер массива:");
@@ -351,14 +378,22 @@ namespace HomeTaskLesson4
 
 
 
-            //hometask5 Строки  Light version :))
+            //hometask5 Строки  
 
-            //string slovo1 = Console.ReadLine();
-            //for (int i = 0; i < slovo1.Length; i++)
-            //{
-            //    Console.Write($"{ slovo1[i]}{ slovo1[i]}");
-            //}
+            string firstWord5 = Console.ReadLine();
+            char[] initWord5 = firstWord5.ToCharArray();
+            int initWord5Length = initWord5.Length;
+            int resultWord5Length = initWord5Length * 2;
 
+            char[] resultWord5 = new char[resultWord5Length];
+
+            for (int i = 0; i < initWord5.Length; i++)
+            {
+                resultWord5[i * 2] = initWord5[i];
+                resultWord5[i * 2 + 1] = initWord5[i];
+            }
+            string secondWord5 = new string(resultWord5);
+            Console.WriteLine(secondWord5);
 
         }
     }
