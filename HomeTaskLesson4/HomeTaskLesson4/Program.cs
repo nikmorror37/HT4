@@ -97,36 +97,36 @@ namespace HomeTaskLesson4
             //}
 
 
-            //hometask1 массивы СДЕЛАЛ !!!!
+            //hometask1 массивы СДЕЛАЛ c помощью Except !
 
-            //int[] array1 = new int[] { 1, 3, 5, 7, 9, 14, 11, 23 }; 
+            //    int[] array1 = new int[] { 1, 3, 5, 7, 9, 14, 14, 23 };
 
 
-            //for (int i = 0; i < array1.Length; i++)
-            //{
-            //    Console.Write(array1[i] + " ");
-            //}
-            //Console.WriteLine("\nВведите число:");
-            //Link1:
-            //int searchNumberToExclude = Convert.ToInt32(Console.ReadLine());
-            //for (int i = 0; i < array1.Length; i++)
-            //{
-            //    if (array1[i] == searchNumberToExclude)
-            //        break;
-            //    else if (i == array1.Length - 1)
+            //    for (int i = 0; i < array1.Length; i++)
             //    {
-            //        Console.WriteLine("\nВведите число заново:");
-            //        goto Link1;
+            //        Console.Write(array1[i] + " ");
             //    }
-            //}
-            //int[] containerArray = new int[] { searchNumberToExclude };
+            //    Console.WriteLine("\nВведите число:");
+            //Link1:
+            //    int searchNumberToExclude = Convert.ToInt32(Console.ReadLine());
+            //    for (int i = 0; i < array1.Length; i++)
+            //    {
+            //        if (array1[i] == searchNumberToExclude)
+            //            break;
+            //        else if (i == array1.Length - 1)
+            //        {
+            //            Console.WriteLine("\nВведите число заново:");
+            //            goto Link1;
+            //        }
+            //    }
+            //    int[] containerArray = new int[] { searchNumberToExclude };
 
-            //int[] array2 = array1.Except(containerArray).ToArray();
+            //    int[] array2 = array1.Except(containerArray).ToArray();
 
-            //for (int i = 0; i < array2.Length; i++)
-            //{
-            //    Console.Write(array2[i] + " ");     
-            //}
+            //    for (int i = 0; i < array2.Length; i++)
+            //    {
+            //        Console.Write(array2[i] + " ");
+            //    }
 
 
             //hometask2 массивы
@@ -291,7 +291,7 @@ namespace HomeTaskLesson4
             //}
 
 
-            //hometask7 Доп задания Алгоритм сортировки пузырьком (Сделаю к четвергу)
+            //hometask7 Доп задания Алгоритм сортировки пузырьком (Сделаю 15.02)
 
 
 
@@ -326,38 +326,27 @@ namespace HomeTaskLesson4
             //Console.WriteLine($"Самое длинное слово в строке: {words[maxIndex]} ");
 
 
-            //hometask3 Строки ДОДЕЛАТЬ, очень близко!
+            //hometask3 Строки
 
-            //string text_2 = "Papa mama tata sestra kifkf4jop ob";
-            //string[] words = text_2.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            //for (int i = 0; i < words.Length; i++)
-            //{
-            //    Console.WriteLine(words[i]);
-            //}
-            //int count = 0;
-            //int k = 0;
+            //Console.WriteLine("Введите через пробел или запятую слова:\n");
+            //string text_3 = Console.ReadLine();
+            //string[] wordsArray = text_3.Split(new char[] { ' ', ','}, StringSplitOptions.RemoveEmptyEntries);
+            //string searchWord = wordsArray[0];
 
-            //for(int i = 0; i < words.Length; i++)
+            //for(int i = 1; i< wordsArray.Length; i++) 
             //{
-            //    char[] word = words[i].ToCharArray();
-            //    Console.WriteLine(word);
-            //    for(int j = 0; j < word.Length; j++)
+            //    Console.WriteLine(searchWord.Distinct().Count());
+            //    Console.WriteLine(wordsArray[i].Distinct().Count()); 
+            //    Console.WriteLine("\n");
+            //    if (wordsArray[i].Distinct().Count() < searchWord.Distinct().Count())
             //    {
-            //        count++;
-            //        if (j == word.Length - 1)
-            //        {
-            //            Console.WriteLine($"\nКоличество символов в слове {count}\n");
-            //            count = 0;
-            //        }
-
+            //        searchWord = wordsArray[i];       
             //    }
-            //    //Console.WriteLine($"Количество символов в слове {count}");
-            //    Console.ReadKey();
             //}
+            //Console.WriteLine($"В слове {searchWord} минимальное количество уникальных символов среди всех введеных слов");
 
 
-
-            //hometask4 Строки Сделать!
+            //hometask4 Строки Сделать HARD!
 
 
 
