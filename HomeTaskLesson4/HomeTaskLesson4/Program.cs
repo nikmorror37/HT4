@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.Globalization;
+using System.Text;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace HomeTaskLesson4
 {
@@ -37,7 +39,7 @@ namespace HomeTaskLesson4
             //int res = 0;
             //do
             //{
-            //    res = res + i;
+            //    res += i;
             //    i++;
             //}
             //while (i <= c);
@@ -77,50 +79,61 @@ namespace HomeTaskLesson4
 
             //hometask0 Массивы
 
-            //int[] Array1 = new int[] { 1, 3, 4, 4, 7, 8, 11, 23 };
-            //Console.WriteLine("Введите число:");
+            //int[] array1 = new int[] { 1, 3, 4, 4, 7, 8, 11, 23 };
+            //Console.WriteLine("введите число:");
             //int searchnumber = Convert.ToInt32(Console.ReadLine());
-            //for (int i = 0; i < Array1.Length; i++) 
+            //for (int i = 0; i < array1.Length; i++)
             //{
-            //    if (Array1[i] == searchnumber)
+            //    if (array1[i] == searchnumber)
             //    {
-            //        Console.WriteLine($"Заданное число {searchnumber} входит в массив");
+            //        Console.WriteLine($"заданное число {searchnumber} входит в массив");
             //        break;
             //    }
-            //    else if (i == Array1.Length-1)
+            //    else if (i == array1.Length - 1)
             //    {
-            //        Console.WriteLine($"Заданное число {searchnumber} НЕ входит в массив");
+            //        Console.WriteLine($"заданное число {searchnumber} не входит в массив");
             //    }
 
             //}
 
 
-            //hometask1 массивы Не понимаю как закончить логику:( !!!!
+            //hometask1 массивы СДЕЛАЛ !!!!
 
-            //int[] Array1 = new int[] { 1, 3, 4, 5, 7, 8, 11, 23 };
-            //Console.WriteLine("Введите число:");
-            //var searchnumber = Convert.ToInt32(Console.ReadLine());
-            //int[] Array2 = new int[Array1.Length - 1];
+            //int[] array1 = new int[] { 1, 3, 5, 7, 9, 14, 11, 23 }; 
 
-            //for (int i = 0; i < Array1.Length; i++)
+
+            //for (int i = 0; i < array1.Length; i++)
             //{
-            //    Array2[i] = Array1[i];
-            //    Console.WriteLine(Array2[i]);
-            //    if (Array1[i] == searchnumber) //как дальше ?
+            //    Console.Write(array1[i] + " ");
+            //}
+            //Console.WriteLine("\nВведите число:");
+            //Link1:
+            //int searchNumberToExclude = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 0; i < array1.Length; i++)
+            //{
+            //    if (array1[i] == searchNumberToExclude)
+            //        break;
+            //    else if (i == array1.Length - 1)
             //    {
-            //        for (int j = 0; j < Array1.Length; j++)
-            //        {
-            //            Array2[j - 1] = Array1[j];
-            //            Console.WriteLine(Array2[j]);
-            //        }
+            //        Console.WriteLine("\nВведите число заново:");
+            //        goto Link1;
             //    }
+            //}
+            //int[] containerArray = new int[] { searchNumberToExclude };
+
+            //int[] array2 = array1.Except(containerArray).ToArray();
+
+            //for (int i = 0; i < array2.Length; i++)
+            //{
+            //    Console.Write(array2[i] + " ");     
             //}
 
 
             //hometask2 массивы
+
             //Console.WriteLine("Введите размер массива:");
             //int k = Convert.ToInt32(Console.ReadLine());    
-            //int[] Array3 = new int[k];
+            //int[] array3 = new int[k];
             //int maxElement = int.MinValue;
             //int minElement = int.MaxValue;
             //double avgElement = 0;
@@ -129,16 +142,16 @@ namespace HomeTaskLesson4
 
             //for (int i = 0; i < Array3.Length; i++)
             //{
-            //    Array3[i] = rand.Next(1, 99);
-            //    sum += Array3[i];
-            //    Console.WriteLine(Array3[i]);
-            //    if (maxElement < Array3[i])
+            //    array3[i] = rand.Next(1, 99);
+            //    sum += array3[i];
+            //    Console.WriteLine(array3[i]);
+            //    if (maxElement < array3[i])
             //    {
-            //        maxElement = Array3[i];
+            //        maxElement = array3[i];
             //    }
-            //    if (minElement > Array3[i])
+            //    if (minElement > array3[i])
             //    {
-            //        minElement = Array3[i];
+            //        minElement = array3[i];
             //    }
             //    avgElement = sum / k;
             //}
@@ -149,20 +162,20 @@ namespace HomeTaskLesson4
 
             //hometask3 массивы
 
-            //int[] Array1 = { 3, 13, 25, 33, 43 };
-            //int[] Array2 = { 2, 10, 26, 32, 57 };
+            //int[] array1 = { 3, 13, 25, 33, 43 };
+            //int[] array2 = { 2, 10, 26, 32, 57 };
             //double sum1 = 0;
-            //double avgArray1 = 0;   
+            //double avgArray1 = 0;
             //double sum2 = 0;
             //double avgArray2 = 0;
-            //foreach (int nums1 in Array1) 
+            //foreach (int nums1 in array1)
             //{
             //    Console.Write(nums1 + " ");
             //    sum1 += nums1;
             //}
             //Console.WriteLine("\n");
-            //foreach(int nums2 in Array2) 
-            //{ 
+            //foreach (int nums2 in array2)
+            //{
             //    Console.Write(nums2 + " ");
             //    sum2 += nums2;
             //}
@@ -186,15 +199,15 @@ namespace HomeTaskLesson4
 
             //hometask1 числа Fibbonachi Доп задания
 
-            //int[] Fib = new int[11];
+            //int[] fib = new int[11];
             //int num1 = 1;
             //int res = 0;
-            //for (int i = 0; i < Fib.Length; i++)
+            //for (int i = 0; i < fib.Length; i++)
             //{
-            //    Fib[i] = res;
-            //    Console.WriteLine(Fib[i]);
+            //    fib[i] = res;
+            //    Console.WriteLine(fib[i]);
             //    res = num1;
-            //    num1 += Fib[i];
+            //    num1 += fib[i];
             //}
 
 
@@ -227,54 +240,135 @@ namespace HomeTaskLesson4
             //    goto Link1;
             //Console.WriteLine("\nПервый массив");
 
-            //int[] Array1 = new int[arrSize];
-            //int[] Array2 = new int[arrSize];
+            //int[] array1 = new int[arrSize];
+            //int[] array2 = new int[arrSize];
             //Random rand = new Random();
 
-            //for (int i = 0; i < Array1.Length; i++)
+            //for (int i = 0; i < array1.Length; i++)
             //{
-            //    Array1[i] = rand.Next(1, 999);
-            //    Console.WriteLine(Array1[i]);
+            //    array1[i] = rand.Next(1, 999);
+            //    Console.WriteLine(array1[i]);
 
             //}
             //Console.WriteLine("\nВторой массив с элементами только четных чисел из 1го массива");
-            //for (int i = 0; i < Array1.Length; i++)
+            //for (int i = 0; i < array1.Length; i++)
             //{
-            //    if (Array1[i] % 2 == 0)
+            //    if (array1[i] % 2 == 0)
             //    {
-            //        Array2[i] = Array1[i];
-            //        Console.WriteLine(Array2[i]);
+            //        array2[i] = array1[i];
+            //        Console.WriteLine(array2[i]);
             //    }
             //}
 
 
             //hometask5 Доп задания
 
-            //int[] Array1 = { 3, 10, 25, 18, 4, 7, 17, 101 };
-            //foreach (int nums1 in Array1)
+            //int[] array1 = { 3, 10, 25, 18, 4, 7, 17, 101 };
+            //foreach (int nums1 in array1)
             //{
             //    Console.Write(nums1 + " ");
             //}
             //Console.WriteLine("\n");
-            //for (int i = 0; i < Array1.Length; i++) 
+            //for (int i = 0; i < array1.Length; i++) 
             //{
             //    if (i % 2 != 0) 
             //    {
-            //        Array1[i] = 0;
+            //        array1[i] = 0;
             //    }
-            //    Console.Write(Array1[i] + " ");
+            //    Console.Write(array1[i] + " ");
             //}
 
 
             //hometask6 Доп задания Отсортировать массив строк
 
+            //string text_6 = Console.ReadLine();
+            //string[] names = text_6.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            //Array.Sort(names);
+            //foreach (string name in names)
+            //{
+            //    Console.WriteLine(name);
+            //}
+
+
+            //hometask7 Доп задания Алгоритм сортировки пузырьком (Сделаю к четвергу)
 
 
 
-            //hometask7 Доп задания Алгоритм сортировки пузырьком 
+
+
+            //hometask2 Строки
+
+            //string text_1 = Console.ReadLine();
+            //string[] words = text_1.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            //int maxLength = words[0].Length;
+            //int minLength = words[0].Length;
+            //var maxIndex = 0;
+            //var minIndex = 0;
+            //var Length = 0;
+
+            //for (int i = 1; i < words.Length; i++)
+            //{
+            //    Length = words[i].Length;
+            //    if (Length >= maxLength) 
+            //    {
+            //        maxLength = Length;
+            //        maxIndex= i;
+            //    }
+            //    else if (Length <= minLength) 
+            //    {
+            //        minLength = Length;
+            //        minIndex = i;
+            //    }
+            //}
+            //Console.WriteLine($"Самое короткое слово в строке: {words[minIndex]} ");
+            //Console.WriteLine($"Самое длинное слово в строке: {words[maxIndex]} ");
+
+
+            //hometask3 Строки ДОДЕЛАТЬ, очень близко!
+
+            //string text_2 = "Papa mama tata sestra kifkf4jop ob";
+            //string[] words = text_2.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            //for (int i = 0; i < words.Length; i++)
+            //{
+            //    Console.WriteLine(words[i]);
+            //}
+            //int count = 0;
+            //int k = 0;
+
+            //for(int i = 0; i < words.Length; i++)
+            //{
+            //    char[] word = words[i].ToCharArray();
+            //    Console.WriteLine(word);
+            //    for(int j = 0; j < word.Length; j++)
+            //    {
+            //        count++;
+            //        if (j == word.Length - 1)
+            //        {
+            //            Console.WriteLine($"\nКоличество символов в слове {count}\n");
+            //            count = 0;
+            //        }
+
+            //    }
+            //    //Console.WriteLine($"Количество символов в слове {count}");
+            //    Console.ReadKey();
+            //}
 
 
 
+            //hometask4 Строки Сделать!
+
+
+
+
+            //hometask5 Строки  Light version :))
+
+            //string slovo1 = Console.ReadLine();
+            //for (int i = 0; i < slovo1.Length; i++)
+            //{
+            //    Console.Write($"{ slovo1[i]}{ slovo1[i]}");
+            //}
 
 
         }
