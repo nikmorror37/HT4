@@ -129,7 +129,7 @@ namespace HomeTaskLesson4
             //    }
 
 
-            //hometask1(второй вариант) массивы решение с занятия для саморазвития
+            //hometask1(второй вариант) массивы *Решение с занятия (для саморазвития)*
 
             //int[] source = { 5, 4, 7, 2, 9, 7, 10 };
             //int numberReadLine = Convert.ToInt32(Console.ReadLine());
@@ -155,6 +155,7 @@ namespace HomeTaskLesson4
             //        iterationForAppend++;
             //    }
             //}
+
 
             //hometask2 массивы
 
@@ -318,11 +319,65 @@ namespace HomeTaskLesson4
             //}
 
 
-            //hometask7 Доп задания Алгоритм сортировки пузырьком (Сделаю 15.02)
+            //hometask7 Доп задания Алгоритм сортировки пузырьком (Сделал)
 
+            /*
+            string[] array7;
+            string temp;
+            Console.WriteLine("\nВ этом задании будет использоваться алгоритм сортировки ПУЗЫРЬКОМ:");
+            Console.WriteLine("------------------------------------------------------------------");
+            Console.Write("Введите количество строк (слов), которые вы собираетесь ввести: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            array7 = new string[n];
+            Console.Write($"Введите через Enter {n} строк (слов(а)):\n\n");
+            for (int i = 0; i < n; i++)
+            {
+                array7[i] = Console.ReadLine();
+            }
+            Console.WriteLine("------------------------------------------------------------------");
+            Console.WriteLine("Выберите вариант сортировки:");
+            Console.WriteLine("1 - вывод в прямом алфавитном порядке");
+            Console.WriteLine("2 - вывод в обратном алфавитном порядке");
+            
+            LinkRepeat:
+            int choise = Convert.ToInt32(Console.ReadLine());
+            // пример кода алгоритма сортировки пузырьком
+            for (int i = 0; i < array7.Length; i++)
+            {
 
-
-
+                for (int j = 0; j < array7.Length - 1; j++)//чтобы не выйти за пределы массива
+                {
+                    switch (choise)
+                    {
+                        case 1:
+                            if (array7[j].CompareTo(array7[j + 1]) > 0)
+                            {
+                                temp = array7[j];
+                                array7[j] = array7[j + 1];
+                                array7[j + 1] = temp;//меняем местами значения элементов массива string
+                            }
+                            break;
+                        case 2:
+                            if (array7[j].CompareTo(array7[j + 1]) < 0)
+                            {
+                                temp = array7[j];
+                                array7[j] = array7[j + 1];
+                                array7[j + 1] = temp; //меняем местами значения элементов массива string
+                            }
+                            break;
+                        default:
+                            Console.WriteLine("Повторите ввод 1 или 2 ...");
+                            goto LinkRepeat;
+                    }
+                }
+            }
+            Console.WriteLine("\nРезультат сортировки:\n");
+            for (int i = 0; i < array7.Length; i++)
+            {
+                Console.WriteLine(array7[i] + " ");
+            }
+            */
+            
 
             //hometask2 Строки
 
@@ -380,20 +435,20 @@ namespace HomeTaskLesson4
 
             //hometask5 Строки  
 
-            string firstWord5 = Console.ReadLine();
-            char[] initWord5 = firstWord5.ToCharArray();
-            int initWord5Length = initWord5.Length;
-            int resultWord5Length = initWord5Length * 2;
+            //string firstWord5 = Console.ReadLine();
+            //char[] initWord5 = firstWord5.ToCharArray();
+            //int initWord5Length = initWord5.Length;
+            //int resultWord5Length = initWord5Length * 2;
 
-            char[] resultWord5 = new char[resultWord5Length];
+            //char[] resultWord5 = new char[resultWord5Length];
 
-            for (int i = 0; i < initWord5.Length; i++)
-            {
-                resultWord5[i * 2] = initWord5[i];
-                resultWord5[i * 2 + 1] = initWord5[i];
-            }
-            string secondWord5 = new string(resultWord5);
-            Console.WriteLine(secondWord5);
+            //for (int i = 0; i < initWord5.Length; i++)
+            //{
+            //    resultWord5[i * 2] = initWord5[i];
+            //    resultWord5[i * 2 + 1] = initWord5[i];
+            //}
+            //string secondWord5 = new string(resultWord5);
+            //Console.WriteLine(secondWord5);
 
         }
     }
