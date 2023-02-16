@@ -377,7 +377,7 @@ namespace HomeTaskLesson4
                 Console.WriteLine(array7[i] + " ");
             }
             */
-            
+
 
             //hometask2 Строки
 
@@ -428,9 +428,52 @@ namespace HomeTaskLesson4
             //Console.WriteLine($"В слове {searchWord} минимальное количество уникальных символов среди всех введеных слов");
 
 
-            //hometask4 Строки Сделать HARD!
+            //hometask4 Строки Сделал!!!
+
+            //string[] palindroms = new string[] {"ПапаП",
+            //"Мамам",
+            //"поткоп",
+            //"потоп",
+            //"топот",
+            //"мороз",
+            //"шалаш"};
+
+            //foreach (var palindrom in palindroms)
+            //{
+
+            //    //поиск середины палиндрома
+
+            //    if (palindrom.Length % 2 == 0)
+            //    {
+            //        Console.WriteLine($"Слово {palindrom} палиндром? : False");
+            //        continue;
+            //    }
+            //    var pivotIndex = (int)Math.Round(palindrom.Length / 2m);
 
 
+            //    //сравнение букв слова начиная с двух концов: x - начало, y - конец
+            //    int y = palindrom.Length - 1;
+
+            //    bool isPalindrom = true;
+
+            //    for (int i = 0; i <= pivotIndex; i++, y--)
+            //    {
+
+            //        if (palindrom[i] == palindrom[y])
+            //        {
+            //            continue;
+            //        }
+            //        else
+            //        {
+            //            isPalindrom = false;
+            //        }
+            //    }
+
+            //    Console.WriteLine($"Слово {palindrom} палиндром? : {isPalindrom} ");
+
+            //}
+
+            //Console.ReadKey();
 
 
             //hometask5 Строки  
